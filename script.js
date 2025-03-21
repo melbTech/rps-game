@@ -28,15 +28,7 @@ function playRound(humanChoice, computerChoice) {
     if (computerChoice === "rock" && humanChoice === "scissors" || 
         computerChoice === "paper" && humanChoice === "rock" || 
         computerChoice === "scissors" && humanChoice === "paper") {
-            // if (computerChoice === "rock") {
-            //     return "computer"
-            // }
-            // if (computerChoice === "Paper") {
-            //     return "computer"
-            // }
-            // if (computerChoice === "scissors") {
-            //     return "computer"
-            // }
+            
             return "computer";
         }
     else if (humanChoice === "rock" && computerChoice === "scissors" || 
@@ -90,8 +82,10 @@ function playGame() {
 
     if (computerScore > humanScore) {
         console.log(`You lose! Computer got ${computerScore} and you got ${humanScore}`)
-    } else {
+    } else if (humanScore > computerScore) {
         console.log(`You Win! Computer got ${computerScore} and you got ${humanScore}`)
+    } else{
+        console.log(`It's a tie! Computer got ${computerScore} and you got ${humanScore}`)
     }
 }
 
